@@ -1,0 +1,444 @@
+@font-face {
+  font-family: 'Gotham';
+  src: url('Gotham-Black.otf') format('truetype');
+}
+
+body {
+    background-color: #1f1f1f;
+    font-family: 'Gotham';
+    color: #F5FFFA;
+    padding: 0px;
+    margin: 0px;
+}
+
+h1 {
+    color: #F5FFFA;
+    font-family: 'Gotham';
+    font-size: 50px;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 0px;
+}
+
+nav {
+    display: flex;
+    background-color: #E50914;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.navLink {
+    display: flex;
+    text-decoration: none; 
+    padding: 10px;
+    transition: 1s 0s; 
+    min-width: 80px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.navLink:hover{
+    background-color: #FA8072;
+    color: black;
+}
+
+.content {
+    width: 100%;
+    padding-left: 10px;
+
+}
+
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 45vh;
+    margin-bottom: 15px;
+    background-color: #363636;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    transition: 1s 0s;
+}
+
+.card:hover{
+    background-color: #696969;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.card-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    max-height: 45vh;
+}
+.card-img-img {
+    width: 45vh;
+}
+
+.card-text {
+    display: flex;
+    flex-wrap: wrap;
+    width: 44.5vh;
+    background-color: #363636;
+    border-radius: 10vh;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    transition: 1s 0s;
+}
+
+.card-text:hover {
+    background-color: #696969;
+    color: black;
+}
+
+.card-text-font {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.botao-add {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    color: white;
+    padding: 5px;
+    transition: 1s 0s;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 90%;
+}
+.div-botao-add {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.botao-add:hover {
+    background-color: white;
+    border: 1px solid green;
+    color: green;
+}
+
+
+
+.search {
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: flex;
+}
+
+.search-first {
+    display: flex;
+    flex-grow: 2;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.search-second {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    
+}
+
+
+.alert {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.alert-verde {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: yellowgreen;
+    color: white;
+    padding: 10px;
+}
+
+.alert-vermelho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: orangered;
+    color: white;
+    padding: 10px;
+}
+
+.div-adicionar-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.div-adicionar-img {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+.adicionar-img {
+    border: 4px solid blue;
+    border-radius: 20px;
+}
+.div-adicionar {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.adicionar-textarea {
+    width: 85%;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
+}
+.adicionar-textarea:focus {
+    outline: none;
+}
+
+.select {
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 3px;
+    box-shadow: 1px 1px 5px black;
+    width: 20%;
+
+}
+
+.select:focus {
+    border: none;
+    
+}
+
+
+.configadicionar {
+    width: 20%;
+    margin-top: 30px;
+}
+
+
+.adicionar-h1 {
+    width: 100%;
+    text-align: center;
+}
+
+
+.form-edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.login-form{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.div-adicionar-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.div-adicionar-img {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+.adicionar-img {
+    border: 4px solid blue;
+    border-radius: 20px;
+}
+.div-adicionar {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.adicionar-textarea {
+    width: 85%;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
+}
+.adicionar-textarea:focus {
+    outline: none;
+}
+
+.select {
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 3px;
+    box-shadow: 1px 1px 5px black;
+    width: 20%;
+
+}
+
+.select:focus {
+    border: none;
+    
+}
+
+
+.configadicionar {
+    width: 20%;
+    margin-top: 30px;
+}
+
+
+.adicionar-h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    transition: 1s 0s;
+    border-radius: 10px;
+    border: 1px solid blue;
+}
+
+.botao:hover {
+    background-color: white;
+    border: 1px solid blue;
+    color: blue;    
+}
+
+.botao:active {
+    transition: 0.1s 0s;
+    box-shadow: 1px 1px 5px lightgray;
+    transform: scale(1.1);
+}
+
+input:focus {
+    outline: 0px;
+}
+
+
+.input-login {
+    border: none;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: 1s 0s;
+    
+}
+.input-login:hover {
+    box-shadow: 1px 1px 5px black;
+}
+.input-login:focus {
+    border: 1px solid blue;
+}
+
+
+.input-search {
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 1s 0s;
+    width: 70%;
+}
+
+.input-search:focus {
+    outline: none;
+}
+
+.div-tabela {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+table {
+    width: 80%;
+    border-top: 4px solid blue;
+    border-bottom: 4px solid blue;
+}
+
+
+
+.th-primary {
+    
+    width: 60%;
+    
+}
+
+.th-second {
+    width: 10%;
+    
+}
+
+.div-icon {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+td {
+    border-top: 1px solid aqua;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}

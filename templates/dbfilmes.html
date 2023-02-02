@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Filmes salvos no banco de dados</h1>
+<div class="div-tabela">
+
+
+    <table>
+        <thead>
+            <tr>
+                <th class="th-primary">
+                    Nome
+                </th>
+                <th class="th-second">
+                    Status
+                </th>
+                <th class="th-second">
+                    Favorito
+                </th>
+                <th class="th-second">
+                    Editar
+                </th>
+                <th class="th-second">
+                    Deletar
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for l in playlists %}
+            <tr>
+                <td >{{ l.titulo }}</td>
+
+                {% if l.status %}
+                <td class="td">
+                    <div class="div-icon">
+                        <i class="bi bi-eye-fill"></i>
+                    </div>
+                </td>
+                {% else %}
+                <td class="td">
+                    <div class="div-icon"><i class="bi bi-eye-slash-fill"></i></div>
+                </td>
+                {% endif %}
+
+                {% if l.favorito %}
+                    <td class="td">
+                        <div class="div-icon"><i class="bi bi-star-fill"></i></div>
+                    </td>
+                
+                {% else %}
+                
+                <td class="td">
+                    <div class="div-icon"><i class="bi bi-star"></i></div>
+                </td>
+                {% endif %}
+
+                <td class="td">
+                    <div class="div-icon">
+                        <a href="{{ url_for('editar', id=l.id) }}"><i class="bi bi-pencil-square"></i></a>
+                    </div>
+                </td>
+                <td class="td">
+                    <div class="div-icon">
+                        <a href="{{ url_for('deletar', id=l.id) }}"><i class="bi bi-trash3-fill"></i></a>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+
+
+
+   
+
+{% endblock %}

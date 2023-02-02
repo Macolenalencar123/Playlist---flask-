@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form action="" method="post">
+        <input type="hidden" name="title" value="{{ title }}">
+        <input type="hidden" name="img" value="{{ img }}">
+        
+        <div class="div-adicionar-content">
+            <h1 class="adicionar-h1">{{ title }}</h1>
+            
+
+            <div class="div-adicionar-img">
+                <img class="adicionar-img" src="{{ img }}">
+            </div>
+            
+            <div class="div-adicionar">
+                <textarea class="adicionar-textarea" name="avaliacao" id="" cols="30" rows="8" placeholder="Avalie o filme" required></textarea>
+                <select class="select" name="status" id="">
+                    <option value="{{ True }}">Visto</option>
+                    <option value="{{ False }}">Não visto</option>
+                </select>
+                <select class="select" name="favorito" id="">
+                    <option value="{{ True }}">Favorito</option>
+                    <option value="{{ False }}">Não favorito</option>
+                </select>
+                
+                
+                
+            </div>
+            <input class="botao configadicionar"  type="submit" value="Enviar">
+        </div>
+        
+        
+    </form>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form class="search" action="" method="POST">
+    <div class="search-first">
+        <input class="input-search" type="search" name="titulofilme" id="" placeholder="Nome do filme" required>
+    </div>
+    <div class="search-second">
+        <button class="botao"><b><i class="bi bi-search"></i></b>Pesquisar</button>
+    </div>
+</form>
+
+
+<div class="home">
+{% for filme in filmes %}
+
+<div class="card">
+    <div class="card-img">
+        <img class="card-img-img" src="{{filme[1]}}" alt="">
+    </div>
+    <div class="card-text">
+        <p class="card-text-font">{{filme[0]}}</p>
+        <div class="div-botao-add">
+            <a class="botao-add" href="{{ url_for('adicionar', title=filme[2], img=filme[1] ) }}">Adicionar filme</a>
+        </div>
+        
+    </div>
+    
+</div>
+
+{% endfor %}
+</div>
+
+
+{% endblock %}
