@@ -14,7 +14,7 @@ body {
 h1 {
     color: #F5FFFA;
     font-family: 'Gotham';
-    font-size: 50px;
+    font-size: 45px;
     text-transform: uppercase;
     padding: 10px;
     margin: 0px;
@@ -26,6 +26,7 @@ nav {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    border-bottom: 2px solid white;
 }
 
 .navLink {
@@ -58,7 +59,7 @@ nav {
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
-    
+
 
 }
 
@@ -119,13 +120,14 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: green;
+    background-color: #696969;
     color: white;
     padding: 5px;
     transition: 1s 0s;
     border-radius: 10px;
     text-decoration: none;
     width: 90%;
+    text-transform: uppercase;
 }
 .div-botao-add {
     display: flex;
@@ -135,11 +137,9 @@ nav {
 }
 .botao-add:hover {
     background-color: white;
-    border: 1px solid green;
-    color: green;
+    border: 1px solid #363636;
+    color: black;
 }
-
-
 
 .search {
     width: 100%;
@@ -174,9 +174,11 @@ nav {
     justify-content: center;
     align-items: center;
     width: 50%;
-    background-color: yellowgreen;
+    background-color: #363636;
     color: white;
-    padding: 10px;
+    padding: 15px;
+    text-transform: uppercase;
+    border-radius: 8px;
 }
 
 .alert-vermelho {
@@ -184,9 +186,11 @@ nav {
     justify-content: center;
     align-items: center;
     width: 50%;
-    background-color: orangered;
+    background-color: #363636;
     color: white;
-    padding: 10px;
+    padding: 15px;
+    text-transform: uppercase;
+    border-radius: 8px;
 }
 
 .div-adicionar-content {
@@ -200,10 +204,19 @@ nav {
     align-items: center;
     justify-content: center;
 }
-.adicionar-img {
-    border: 4px solid blue;
-    border-radius: 20px;
+
+.add-img {
+    border: 10px solid #363636;
+    border-radius: 10px;
+    transition: 1s 0s;
 }
+
+.add-img:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
 .div-adicionar {
     display: flex;
     flex-grow: 1;
@@ -212,6 +225,13 @@ nav {
     width: 50%;
     align-items: center;
     justify-content: space-around;
+    transition: 1s 0s;
+}
+
+.div-adicionar:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .adicionar-textarea {
@@ -227,11 +247,11 @@ nav {
 
 .select {
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 15px;
     padding: 3px;
-    box-shadow: 1px 1px 5px black;
+    box-shadow: 1px 1px 4px black;
     width: 20%;
-
+    text-transform: uppercase;
 }
 
 .select:focus {
@@ -262,9 +282,9 @@ nav {
 .login {
     display: flex;
     width: 100%;
+    font-size: 20px;
     align-items: center;
     justify-content: center;
-    
 }
 
 .login-form{
@@ -272,8 +292,9 @@ nav {
     width: 50%;
     flex-direction: column;
     align-items: center;
+    font-family:'Gotham';
     justify-content: center;
-    background-color: aqua;
+    background-color: #E50914;
     margin-top: 50px;
     padding: 20px;
     border-radius: 10px;
@@ -345,19 +366,23 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: blue;
+    background-color: #1f1f1f;
     color: white;
-    font-weight: bold;
     padding: 10px;
     transition: 1s 0s;
     border-radius: 10px;
-    border: 1px solid blue;
+    border: 2px solid white;
+    text-transform: uppercase;
+    margin-bottom: 5px;
 }
 
 .botao:hover {
     background-color: white;
-    border: 1px solid blue;
-    color: blue;    
+    border: 1px solid black;
+    color: black;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .botao:active {
@@ -372,7 +397,7 @@ input:focus {
 
 
 .input-login {
-    border: none;
+    border: 1px;
     padding-left: 10px;
     padding-top: 3px;
     padding-bottom: 3px;
@@ -387,7 +412,10 @@ input:focus {
     box-shadow: 1px 1px 5px black;
 }
 .input-login:focus {
-    border: 1px solid blue;
+    border:1px solid black;
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 
@@ -413,21 +441,17 @@ input:focus {
 
 table {
     width: 80%;
-    border-top: 4px solid blue;
-    border-bottom: 4px solid blue;
+    margin-top: 20px;
+    border-top 3px solid white;
+    border-bottom: 3px solid white;
 }
 
-
-
 .th-primary {
-    
     width: 60%;
-    
 }
 
 .th-second {
     width: 10%;
-    
 }
 
 .div-icon {
@@ -438,7 +462,42 @@ table {
 }
 
 td {
-    border-top: 1px solid aqua;
+    border-top: 2px solid #363636;
     padding-top: 3px;
     padding-bottom: 3px;
+}
+
+footer {
+    display: block;
+    background-color: #E50914;
+    margin-top: 50px;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid white;
+}
+
+h2 {
+    color: #F5FFFA;
+    font-family: 'Gotham';
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 0px;
+}
+
+.excluir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+p {
+   color: #F5FFFA;
+    font-family: 'Gotham';
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 0px;
+    font-size: 30px;
 }

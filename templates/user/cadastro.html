@@ -1,18 +1,15 @@
 {% extends 'base.html' %}
-
-
 {% block content %}
 <div class="login">
     <form class="login-form" method="post">
-        <h1>Cadastrar usuario</h1>
-        <label for="username">Username</label>
-        <input class="input-login" type="text" placeholder="Username" name="username" required>
+        <h1>Cadastro de usuário</h1>
+        <label for="username">Nome de usuário</label>
+        <input class="input-login" type="text" placeholder="Nome de usuário" name="username" required>
         <label for="email">Email</label>
         <input class="input-login" type="email" placeholder="Email" name="email" required>
-        <label for="password">Password</label>
-        <input class="input-login" type="password" placeholder="Password" name="password" required>
+        <label for="password">Senha</label>
+        <input class="input-login" type="password" placeholder="Senha" name="password" required>
         <input class="botao" type="submit" value="Cadastrar">
     </form>
 </div>
-
 {% endblock %}

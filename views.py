@@ -45,9 +45,6 @@ def cadastro():
         
     return render_template('user/cadastro.html')
 
-
-
-
 @app.route('/User/Login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -59,10 +56,10 @@ def login():
         user = User.query.filter_by(email=email).first()
         if not user or not user.verify_password(password):
             flash('vermelho')
-            flash('Verifique a senha e email')
+            flash('E-mail ou senha incorretos, tente novamente!')
             return redirect(url_for('login'))
         flash('green')
-        flash('login feito com sucesso')
+        flash('login efetuado com sucesso')
         login_user(user)
         return redirect(url_for('index'))
     return render_template('user/login.html')
@@ -71,7 +68,7 @@ def login():
 @app.route('/Logout')
 def logout():
     flash('green')
-    flash('Logout feito com sucesso!')
+    flash('Logout efetuado com sucesso!')
     logout_user()
     return redirect(url_for('login'))
 
@@ -104,6 +101,8 @@ def index():
 @app.route('/Pesquisar', methods=['GET', 'POST'])
 def pesquisar():
     if not current_user.is_authenticated:
+        flash('verde')
+        flash('Primeiramente faça login!')
         return redirect(url_for('login'))
     
     if request.method == 'POST':
@@ -143,7 +142,7 @@ def adicionar():
         db.session.commit()
         filmes.clear()
         flash('green')
-        flash('Filme adicionado a playlist com sucesso!')
+        flash('Filme adicionado à playlist com sucesso!')
         return redirect(url_for('pesquisar'))
     
     return render_template('addfilme.html', title=title, img=img)
@@ -152,10 +151,22 @@ def adicionar():
 @app.route('/Playlist', methods=['GET', 'POST'])
 def meusfilmes():
     if not current_user.is_authenticated:
+        flash('verde')
+        flash('Primeiramente faça login!')
         return redirect(url_for('login'))
     
     playlists = Playlist.query.filter_by(usuario=current_user.id)
     return render_template('dbfilmes.html', playlists=playlists)
+
+
+@app.route('/Playlist', methods=['GET', 'POST'])
+def voltar():
+    if not current_user.is_authenticated:
+        flash('verde')
+        flash('Primeiramente faça login!')
+        return redirect(url_for('login'))
+
+    return redirect(url_for('dbfilmes'))
 
 @app.route('/Playlist/Editar/<int:id>', methods=['GET', 'POST'])
 def editar(id):
