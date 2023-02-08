@@ -159,15 +159,6 @@ def meusfilmes():
     return render_template('dbfilmes.html', playlists=playlists)
 
 
-@app.route('/Playlist', methods=['GET', 'POST'])
-def voltar():
-    if not current_user.is_authenticated:
-        flash('verde')
-        flash('Primeiramente faça login!')
-        return redirect(url_for('login'))
-
-    return redirect(url_for('dbfilmes'))
-
 @app.route('/Playlist/Editar/<int:id>', methods=['GET', 'POST'])
 def editar(id):
     if not current_user.is_authenticated:
